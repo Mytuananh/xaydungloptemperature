@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(Celius) {
+            this.Celius = Celius;
+        }
+        getCelius() {
+            return this.Celius;
+        }
+        getFahrenheit() {
+            if (this.Celius > -273) {
+                return (9/5 * this.Celius) +32
+            }
+        }
+        getKevin() {
+            if (this.Celius > -273) {
+                return this.Celius + 273
+            }
+        }
+    }
+    let temp = new Temperature(25);
+    let celius = temp.getCelius();
+    let fahrenheit = temp.getFahrenheit();
+    let kevin = temp.getKevin();
+    alert("Từ " + celius + " độ C thành " + fahrenheit + " độ F và " + kevin + " độ K" )
+</script>
+</body>
+</html>
